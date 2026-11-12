@@ -71,7 +71,14 @@ try {
   writeFileSync(join(served, idx.hub.repo, 'index.html'), readFileSync(join(ROOT, 'index.html')));
   const repoDir = (repo) => (idx.repos[repo] && idx.repos[repo].dir) || repo;
   const { owner } = declared();
-  for (const repo of [...new Set(cs.map((c) => c.repo))]) { // one batched blob fetch per repo instead of one lazy fetch per file
+  // repos whose pinned tree could not be fetched (a private repo in CI without access) are not served-tree checked there
+  const skipped = new Set();
+  for (const repo of [...new Set(cs.map((c) => c.repo))]) {
+    const cd = join(ROOT, '.cache', 'trees', repo);
+    try { execFileSync('git', ['-C', cd, 'cat-file', '-e', `${idx.pins[repo]}^{tree}`], { stdio: 'ignore' }); } catch { skipped.add(repo); }
+  }
+  if (skipped.size) console.log(`# served-tree check skipped (tree not reachable here): ${[...skipped].join(', ')}`);
+  for (const repo of [...new Set(cs.map((c) => c.repo))].filter((r) => !skipped.has(r))) { // one batched blob fetch per repo instead of one lazy fetch per file
     const cache = join(ROOT, '.cache', 'trees', repo);
     assert.ok(existsSync(cache), `no .cache for ${repo}: run node scripts/gen-index.mjs --scan`);
     const paths = cs.filter((c) => c.repo === repo).map((c) => c.path);
@@ -80,7 +87,7 @@ try {
     const url = `https://github.com/${owner}/${(pub.find((e) => e.path === repo) || {}).repo}.git`;
     if (missing.length) execFileSync('git', ['-C', cache, '-c', 'fetch.negotiationAlgorithm=noop', 'fetch', '-q', '--no-write-fetch-head', '--filter=blob:none', url, ...missing]);
   }
-  for (const c of cs) {
+  for (const c of cs.filter((x) => !skipped.has(x.repo))) {
     const cache = join(ROOT, '.cache', 'trees', c.repo);
     assert.ok(existsSync(cache), `no .cache for ${c.repo}: run node scripts/gen-index.mjs --scan`);
     const blob = execFileSync('git', ['-C', cache, 'cat-file', 'blob', `${idx.pins[c.repo]}:${c.path}`], { maxBuffer: 1 << 28 });
@@ -97,7 +104,8 @@ try {
   const hrefs = await page.$$eval('a.card', (as) => as.map((a) => a.href));
   ok('page renders every card', () => assert.equal(hrefs.length, cs.length));
   const bad = [];
-  for (const h of hrefs) { const r = await page.request.get(h); if (r.status() !== 200) bad.push(`${r.status()} ${h}`); }
+  const skipDirs = [...skipped].map((r) => `/${repoDir(r)}/`);
+  for (const h of hrefs.filter((h) => !skipDirs.some((d) => new URL(h).pathname.startsWith(d)))) { const r = await page.request.get(h); if (r.status() !== 200) bad.push(`${r.status()} ${h}`); }
   ok(`every card link resolves in the served tree (${hrefs.length})`, () => assert.deepEqual(bad, []));
   await page.fill('#q', 'galaxy');
   const vis = await page.$$eval('a.card:not(.hide)', (as) => as.length);
