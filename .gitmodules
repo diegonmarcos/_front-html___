@@ -71,9 +71,9 @@
 	url = https://github.com/diegonmarcos/cloudy-h-webapps-desk.git
 	branch = main
 
-[submodule "HardTech-Chronos"]
-	path = HardTech-Chronos
-	url = https://github.com/diegonmarcos/HardTech-Chronos.git
+[submodule "Projects-Library-KG"]
+	path = Projects-Library-KG
+	url = https://github.com/diegonmarcos/Projects-Library-KG.git
 	branch = main
 
 [submodule "HardTech-DeepXTech"]
