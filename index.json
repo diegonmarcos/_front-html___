@@ -83,8 +83,8 @@
     "CG-circus": "3af6c415418f9f4316804d666363ed6cd88bf450",
     "CG-galaxy": "38bc6d6e17a084a848e15780d1ed14d2c5fcc990",
     "CG-galaxy-gaia": "5b91ab6ac4c601c33e43750d2f4777bc95cc5c92",
-    "HardTech-Chronos": "716ccac910821bddfe5e4c821794421318fad3a8",
     "HardTech-DeepXTech": "6fb4948ff4b302d232a2558f348ad18de829b14d",
+    "Projects-Library-KG": "db79413daec5bd7dedc4a2355c0686819c210f09",
     "Projects-endeavours": "7cb7b52badb840b49fb32943cf03169b89803edc",
     "Projects-labtools": "e6d4a6f4eabb94f77613502d32d22ba5bd385104",
     "cloud-me-pub-profiles-_lnktree": "253d2398c29094ed7a4c970b17ff5b6c26a6941d",
@@ -1462,24 +1462,12 @@
       "path": "desktop/sites/cloudy-webdesktop/dist/index.html"
     },
     {
-      "repo": "HardTech-Chronos",
-      "path": "dist/0.Humansphere-Circadian/index.html"
+      "repo": "Projects-Library-KG",
+      "path": "Chronos/index.html"
     },
     {
-      "repo": "HardTech-Chronos",
-      "path": "dist/1.Earthsphere-Cycles/index.html"
-    },
-    {
-      "repo": "HardTech-Chronos",
-      "path": "dist/2.Milkwaysphere-Orbits/index.html"
-    },
-    {
-      "repo": "HardTech-Chronos",
-      "path": "dist/3.Quantum-Cycles/index.html"
-    },
-    {
-      "repo": "HardTech-Chronos",
-      "path": "dist/index.html"
+      "repo": "Projects-Library-KG",
+      "path": "index.html"
     },
     {
       "repo": "HardTech-DeepXTech",

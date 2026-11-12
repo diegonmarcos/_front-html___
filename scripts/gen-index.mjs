@@ -76,10 +76,23 @@ export function scan(idx) {
   const exclude = (idx.exclude || []).map((x) => new RegExp(x));
   const include = (idx.include || []).map((x) => new RegExp(x));
   const entries = [];
+  const prev = idx.entries || [];
+  const oldPins = idx.pins || {};
+  idx.pins = {};
   for (const e of pub) {
     const sha = pins[e.path];
     if (!sha) continue;
-    for (const p of pickEntries(scanRepo(owner, e, sha), include)) {
+    let files;
+    try { files = scanRepo(owner, e, sha); }
+    catch (err) {
+      // unreachable with this token (e.g. a private repo in CI): keep the entries recorded for the same pin
+      if (oldPins[e.path] !== sha) throw err;
+      console.warn(`scan: ${e.path} not fetchable, keeping entries pinned at ${sha.slice(0, 7)}`);
+      for (const old of prev) if (old.repo === e.path) entries.push(old);
+      idx.pins[e.path] = sha;
+      continue;
+    }
+    for (const p of pickEntries(files, include)) {
       if (!exclude.some((r) => r.test(`${e.path}/${p}`))) entries.push({ repo: e.path, path: p });
     }
     idx.pins = { ...(idx.pins || {}), [e.path]: sha };
