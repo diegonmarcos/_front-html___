@@ -19,3 +19,23 @@ Public hub of the owner's HTML front ends.
 
 Cloud Browser (Favourites > GH Pages) reads
 `https://raw.githubusercontent.com/diegonmarcos/front-html/main/pages.json` at runtime and keeps the last good copy as a cache.
+
+## Index (index.json, index.html)
+
+`index.html` is an icon grid of every HTML entry point of every **public** sub-repo, grouped by project family, with search,
+group filter, light/dark and a mobile layout. Links are relative and assume the parent `git/` folder is the served root
+(`../<repo>/<path>`). Private repos (`no_deploy` in `html-repos.json`, e.g. project-pvt-all) are never fetched or listed.
+
+- `index.json`: hand-kept `hub` (the hub's own folder/repo name: the only place to change on a repo rename), `groups`,
+  `repos` (title, icon, description, group, `dir`), `overrides` (per `<repo>/<path>`), `exclude`/`include` regexes;
+  generated `pins` + `entries`.
+- `node scripts/gen-index.mjs --scan` refreshes entries from the pinned gitlinks via blobless depth-1 git fetches
+  (trees only, a few MB, no submodule checkout, follows repo renames); `node scripts/gen-index.mjs` renders
+  `index.html`; `--check` fails on drift. Entry point = root `*.html` or `index.html` outside src/static/test/node_modules,
+  `dist/` preferred, sub-pages under another app's entry collapsed.
+- Node, not sh: the repo's generators are already Node, JSON and HTML escaping are native, and the same module is
+  imported by the tests (no jq/sed escaping pitfalls, deterministic sorted output).
+- `node tests/test-index.mjs`: schema, entry rule, deterministic render == committed file, private exclusion, then a
+  temp served tree (only the linked files, read at the pinned SHA) behind a throwaway local server, checked headless
+  with Playwright: every card link 200, search, click-through. CI: `.github/workflows/index.yml` (on push and submodule
+  bump: rescan, commit, test).

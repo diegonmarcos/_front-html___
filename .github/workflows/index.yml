@@ -1,0 +1,33 @@
+name: index
+# Regenerates index.json (scan of the pinned gitlinks) and index.html on every push (a submodule bump is a push of a new
+# gitlink) and commits the result when it changed; then runs the tests incl. the served-tree link check (Playwright).
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency: { group: index, cancel-in-progress: false }
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { submodules: false }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Regenerate index.json + index.html (private repos are never fetched)
+        run: node scripts/gen-index.mjs --scan
+      - name: Commit when changed
+        run: |
+          if ! git diff --quiet -- index.json index.html; then
+            git config user.name github-actions[bot]
+            git config user.email 41898283+github-actions[bot]@users.noreply.github.com
+            git add index.json index.html
+            git commit -m "index: regenerate from pinned submodules"
+            git push origin HEAD:main
+          fi
+      - name: Install Playwright (test only)
+        run: npm i --no-save playwright@1.48.2 && npx playwright install --with-deps chromium
+      - name: Tests
+        run: node tests/test-index.mjs
