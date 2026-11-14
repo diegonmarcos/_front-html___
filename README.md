@@ -1,4 +1,4 @@
-# front-html___
+# _front-html___
 
 Public hub of the owner's HTML front ends.
 
@@ -11,14 +11,14 @@ Public hub of the owner's HTML front ends.
 
 ## Use
 
-    git clone --recurse-submodules https://github.com/diegonmarcos/front-html___
+    git clone --recurse-submodules https://github.com/diegonmarcos/_front-html___
     GH_TOKEN=... node scripts/gen-pages.mjs          # rewrite pages.json
     GH_TOKEN=... node scripts/gen-pages.mjs --check  # exit 1 on drift
 
 ## Consumers
 
 Cloud Browser (Favourites > GH Pages) reads
-`https://raw.githubusercontent.com/diegonmarcos/front-html___/main/pages.json` at runtime and keeps the last good copy as a cache.
+`https://raw.githubusercontent.com/diegonmarcos/_front-html___/main/pages.json` at runtime and keeps the last good copy as a cache.
 
 ## Index (index.json, index.html)
 
