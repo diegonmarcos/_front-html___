@@ -20,6 +20,18 @@ Public hub of the owner's HTML front ends.
 Cloud Browser (Favourites > GH Pages) reads
 `https://raw.githubusercontent.com/diegonmarcos/_front-html___/main/pages.json` at runtime and keeps the last good copy as a cache.
 
+## Repos tree (00_repos-tree/)
+
+The hub's own tree of html repos. Same layout as `_git-repos-master/A0_repos-tree`: `00_repos-tree/src/` (input: `filter.json`; the
+html.tmpl and md.tmpl are the submodule's), `00_repos-tree/dist/` (outputs: json, md, html with Item List / Table / Canvas views and an
+All / HTML / LFS / Others filter, xml, canvas) and the same outputs at the repo root (`repos-tree.*`). There is no list in this repo:
+`git-repos-master/` is a git submodule and the tree is its `A0_repos-tree/dist/repos-tree.json` filtered to kind `html`.
+
+    git submodule update --init --remote git-repos-master        # bump the data
+    node scripts/gen-repos-tree.mjs            # src -> dist -> root
+    node scripts/gen-repos-tree.mjs --check    # drift guard (CI: repos-tree.yml)
+    node tests/test-repos-tree.mjs
+
 ## Index (index.json, index.html)
 
 `index.html` is an icon grid of every HTML entry point of every **public** sub-repo, grouped by project family, with search,

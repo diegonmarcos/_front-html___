@@ -1,0 +1,6 @@
+{
+  "_doc": "Input of scripts/gen-repos-tree.mjs: which repos of the master tree this hub shows. The list itself is NOT kept here; it is the git-repos-master submodule's A0_repos-tree/dist/repos-tree.json filtered by the `flag` (html_repo = kind html). Templates (html.tmpl, md.tmpl) are the submodule's A0_repos-tree/src ones, so there is one template.",
+  "source": "git-repos-master/A0_repos-tree/dist/repos-tree.json",
+  "flag": "html_repo",
+  "kind": "html"
+}

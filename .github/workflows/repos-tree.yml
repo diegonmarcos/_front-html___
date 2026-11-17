@@ -1,0 +1,23 @@
+name: repos-tree
+# Drift guard of 00_repos-tree/: the outputs (dist/ and the root copies) must equal a fresh render of the git-repos-master
+# submodule's A0 repos-tree filtered to kind html. The list is not kept here; a master bump is a new gitlink + regenerated outputs.
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  repos-tree:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with: { submodules: false }
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Fetch the git-repos-master submodule (only that one)
+        run: git submodule update --init --depth 1 git-repos-master
+      - name: Outputs equal a fresh render
+        run: node scripts/gen-repos-tree.mjs --check
+      - name: Tests
+        run: node tests/test-repos-tree.mjs

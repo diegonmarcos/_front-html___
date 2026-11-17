@@ -34,5 +34,11 @@
   ],
   "no_deploy": {
     "project-pvt-all": "PRIVATE: aggregated as a submodule only, never in any public deploy/Pages list"
-  }
+  },
+  "sources": [
+    {
+      "path": "git-repos-master",
+      "repo": "_git-repos-master"
+    }
+  ]
 }

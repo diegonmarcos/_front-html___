@@ -15,10 +15,12 @@ import { fileURLToPath } from 'node:url';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 const decl = JSON.parse(readFileSync(join(ROOT, 'html-repos.json'), 'utf8'));
-const entries = [...decl.base, ...decl.repos.map((r) => ({ path: r, repo: r }))];
+const htmlEntries = [...decl.base, ...decl.repos.map((r) => ({ path: r, repo: r }))];
+// `sources` = submodules that feed this hub's generators (git-repos-master for 00_repos-tree), not html repos: mounted, never deployed or indexed
+const entries = [...htmlEntries, ...(decl.sources || [])];
 
 // deploy set = declared repos minus no_deploy (private, submodule-only)
-export const deploy = entries.filter((e) => !(e.repo in (decl.no_deploy || {}))).map((e) => e.repo);
+export const deploy = htmlEntries.filter((e) => !(e.repo in (decl.no_deploy || {}))).map((e) => e.repo);
 const dup = entries.map((e) => e.path).filter((p, i, a) => a.indexOf(p) !== i);
 if (dup.length) { console.error(`html-repos.json: duplicate path ${dup.join(', ')}`); process.exit(1); }
 

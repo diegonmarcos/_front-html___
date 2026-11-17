@@ -1,0 +1,750 @@
+{
+  "nodes": [
+    {
+      "id": "c649956b08d34c37",
+      "type": "group",
+      "label": "_git-repos-master",
+      "x": 0,
+      "y": 0,
+      "width": 2860,
+      "height": 4140,
+      "color": "4"
+    },
+    {
+      "id": "61b37abb2d70ec68",
+      "type": "text",
+      "text": "**_git-repos-master**\nRepos · Master\n🌐 public · _Meta · code\n[GitHub](https://github.com/diegonmarcos/_git-repos-master)",
+      "x": 20,
+      "y": 40,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "44c7783d6897d19b",
+      "type": "group",
+      "label": "1.1.Cloudy",
+      "x": 340,
+      "y": 40,
+      "width": 1060,
+      "height": 500,
+      "color": "5"
+    },
+    {
+      "id": "8cddbe1125c771e7",
+      "type": "group",
+      "label": "cloudy-___",
+      "x": 680,
+      "y": 80,
+      "width": 700,
+      "height": 440,
+      "color": "2"
+    },
+    {
+      "id": "ae41605aad5649d4",
+      "type": "text",
+      "text": "**cloudy-___**\nCloudy · Hub\n🌐 public · Leaf.y · code\n[GitHub](https://github.com/diegonmarcos/cloudy-___)",
+      "x": 700,
+      "y": 120,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "c06d7a1db2084858",
+      "type": "group",
+      "label": "cloudy-h-webapps-desk",
+      "x": 1020,
+      "y": 120,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "4d9d07e4c02e48fa",
+      "type": "text",
+      "text": "**cloudy-h-webapps-desk**\nCloudy · WebApps\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloudy-h-webapps-desk)",
+      "x": 1040,
+      "y": 160,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "a0445d708611a4c9",
+      "type": "group",
+      "label": "cloudy-h-webapps-mob",
+      "x": 1020,
+      "y": 320,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "3c33994495f9ba6a",
+      "type": "text",
+      "text": "**cloudy-h-webapps-mob**\nCloudy · WebApps\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloudy-h-webapps-mob)",
+      "x": 1040,
+      "y": 360,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "da2e326416e51c59",
+      "type": "group",
+      "label": "1.2.Cloud-me",
+      "x": 340,
+      "y": 560,
+      "width": 2500,
+      "height": 1340,
+      "color": "5"
+    },
+    {
+      "id": "a16629a52d0b173d",
+      "type": "group",
+      "label": "cloud-me-___",
+      "x": 680,
+      "y": 600,
+      "width": 2140,
+      "height": 1280,
+      "color": "2"
+    },
+    {
+      "id": "5ed9c5e27a549178",
+      "type": "text",
+      "text": "**cloud-me-___**\nCloud-Me · Hub\n🌐 public · Leaf.y · code\n[GitHub](https://github.com/diegonmarcos/cloud-me-___)",
+      "x": 700,
+      "y": 640,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "7a69d6e6032743a9",
+      "type": "group",
+      "label": "1.2.Cloud-me/Pub",
+      "x": 1020,
+      "y": 640,
+      "width": 1780,
+      "height": 1220,
+      "color": "5"
+    },
+    {
+      "id": "cc01708e4fc48e45",
+      "type": "group",
+      "label": "cloud-me-pub-___",
+      "x": 1360,
+      "y": 680,
+      "width": 1420,
+      "height": 1160,
+      "color": "2"
+    },
+    {
+      "id": "9d2293fb95755992",
+      "type": "text",
+      "text": "**cloud-me-pub-___**\nCloud-Me · Hub\n🌐 public · Leaf.y · code\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-___)",
+      "x": 1380,
+      "y": 720,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "260ade8db051afc7",
+      "type": "group",
+      "label": "1.2.Cloud-me/Pub/Profiles",
+      "x": 1700,
+      "y": 720,
+      "width": 1060,
+      "height": 1100,
+      "color": "5"
+    },
+    {
+      "id": "c63b82e6729d61d2",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-___",
+      "x": 2040,
+      "y": 760,
+      "width": 700,
+      "height": 1040,
+      "color": "2"
+    },
+    {
+      "id": "c952f08b0288b53b",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-___**\nCloud-Me · Profiles\n🌐 public · Leaf.y · code\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-___)",
+      "x": 2060,
+      "y": 800,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "a50b43b090d84809",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-_lnktree",
+      "x": 2380,
+      "y": 800,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "295a4c825dc0b5e7",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-_lnktree**\nCloud-Me · Profiles\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-_lnktree)",
+      "x": 2400,
+      "y": 840,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "fbfa42360f3d6d0b",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-leaf.y",
+      "x": 2380,
+      "y": 1000,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "663b3d5d2684d9fa",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-leaf.y**\nCloud-Me · Profiles\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-leaf.y)",
+      "x": 2400,
+      "y": 1040,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "b0afc854dca09de5",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-nexus.z",
+      "x": 2380,
+      "y": 1200,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "03c30e10463487c1",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-nexus.z**\nCloud-Me · Profiles\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-nexus.z)",
+      "x": 2400,
+      "y": 1240,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "fd67216637c5c245",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-prf-prs",
+      "x": 2380,
+      "y": 1400,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "d00ea3fed3e0b97e",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-prf-prs**\nCloud-Me · Profiles\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-prf-prs)",
+      "x": 2400,
+      "y": 1440,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "9aa39a7b1c0398a3",
+      "type": "group",
+      "label": "cloud-me-pub-profiles-stark.x",
+      "x": 2380,
+      "y": 1600,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "bd0a6aba995e6fb2",
+      "type": "text",
+      "text": "**cloud-me-pub-profiles-stark.x**\nCloud-Me · Profiles\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/cloud-me-pub-profiles-stark.x)",
+      "x": 2400,
+      "y": 1640,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "b69b4b1767f84936",
+      "type": "group",
+      "label": "2.CG",
+      "x": 340,
+      "y": 1920,
+      "width": 1060,
+      "height": 700,
+      "color": "5"
+    },
+    {
+      "id": "081881a062e42b8f",
+      "type": "group",
+      "label": "CG-___",
+      "x": 680,
+      "y": 1960,
+      "width": 700,
+      "height": 640,
+      "color": "2"
+    },
+    {
+      "id": "1995239d98b99b14",
+      "type": "text",
+      "text": "**CG-___**\n— · Hub\n🌐 public · Leaf.y · code\n[GitHub](https://github.com/diegonmarcos/CG-___)",
+      "x": 700,
+      "y": 2000,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "392ff780e7854ef4",
+      "type": "group",
+      "label": "CG-circus",
+      "x": 1020,
+      "y": 2000,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "a15f44f67ca86eb9",
+      "type": "text",
+      "text": "**CG-circus**\nZirkus · Web Games\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/CG-circus)",
+      "x": 1040,
+      "y": 2040,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "a8c240012bbe83ba",
+      "type": "group",
+      "label": "CG-galaxy",
+      "x": 1020,
+      "y": 2200,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "77e7f50adc3b44a6",
+      "type": "text",
+      "text": "**CG-galaxy**\nGalaxy · Threlte\n🌐 public · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/CG-galaxy)",
+      "x": 1040,
+      "y": 2240,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "3333720d377dfc32",
+      "type": "group",
+      "label": "CG-galaxy-gaia",
+      "x": 1020,
+      "y": 2400,
+      "width": 340,
+      "height": 180,
+      "color": "2"
+    },
+    {
+      "id": "d8b88f1892f4e226",
+      "type": "text",
+      "text": "**CG-galaxy-gaia**\nGalaxy · Threlte\n🔒 private · Leaf.y · html\n[GitHub](https://github.com/diegonmarcos/CG-galaxy-gaia)",
+      "x": 1040,
+      "y": 2440,
+      "width": 300,
+      "height": 120,
+      "color": "1"
+    },
+    {
+      "id": "c9e17889fe569ac2",
+      "type": "group",
+      "label": "4.HardTech",
+      "x": 340,
+      "y": 2640,
+      "width": 1060,
+      "height": 300,
+      "color": "5"
+    },
+    {
+      "id": "dd27e9fe5002d628",
+      "type": "group",
+      "label": "HardTech-___",
+      "x": 680,
+      "y": 2680,
+      "width": 700,
+      "height": 240,
+      "color": "3"
+    },
+    {
+      "id": "c58fc671fb7c8773",
+      "type": "text",
+      "text": "**HardTech-___**\n— · Hub\n🌐 public · Stark.x · code\n[GitHub](https://github.com/diegonmarcos/HardTech-___)",
+      "x": 700,
+      "y": 2720,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "2a2beceaa8a96503",
+      "type": "group",
+      "label": "HardTech-DeepXTech",
+      "x": 1020,
+      "y": 2720,
+      "width": 340,
+      "height": 180,
+      "color": "3"
+    },
+    {
+      "id": "a8fd9977049c760b",
+      "type": "text",
+      "text": "**HardTech-DeepXTech**\nDeepXTech · Sailytics\n🌐 public · Stark.x · html\n[GitHub](https://github.com/diegonmarcos/HardTech-DeepXTech)",
+      "x": 1040,
+      "y": 2760,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "b15e9988750f564f",
+      "type": "group",
+      "label": "6.Projects",
+      "x": 340,
+      "y": 2960,
+      "width": 1060,
+      "height": 500,
+      "color": "5"
+    },
+    {
+      "id": "f9ad0eab9d58e1c3",
+      "type": "group",
+      "label": "Projects-___",
+      "x": 680,
+      "y": 3000,
+      "width": 700,
+      "height": 440,
+      "color": "6"
+    },
+    {
+      "id": "99e82aea5183040e",
+      "type": "text",
+      "text": "**Projects-___**\n— · Hub\n🌐 public · Projects · code\n[GitHub](https://github.com/diegonmarcos/Projects-___)",
+      "x": 700,
+      "y": 3040,
+      "width": 300,
+      "height": 120,
+      "color": "6"
+    },
+    {
+      "id": "fa30de3a114625a0",
+      "type": "group",
+      "label": "Projects-endeavours",
+      "x": 1020,
+      "y": 3040,
+      "width": 340,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "903972ebdeb612ba",
+      "type": "text",
+      "text": "**Projects-endeavours**\nEndeavours · Endeavours\n🌐 public · Projects · html\n[GitHub](https://github.com/diegonmarcos/Projects-endeavours)",
+      "x": 1040,
+      "y": 3080,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "47d3ce9f41d6adb5",
+      "type": "group",
+      "label": "Projects-Library-KG",
+      "x": 1020,
+      "y": 3240,
+      "width": 340,
+      "height": 180,
+      "color": "6"
+    },
+    {
+      "id": "8c0613a8b5f718ae",
+      "type": "text",
+      "text": "**Projects-Library-KG**\nLibrary-KG · Library-KG\n🌐 public · Projects · html\n[GitHub](https://github.com/diegonmarcos/Projects-Library-KG)",
+      "x": 1040,
+      "y": 3280,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "0cda0fb9e52425c1",
+      "type": "group",
+      "label": "7.Others",
+      "x": 340,
+      "y": 3480,
+      "width": 700,
+      "height": 640,
+      "color": "5"
+    },
+    {
+      "id": "6a7410c318dda9dd",
+      "type": "group",
+      "label": "_front-html___",
+      "x": 680,
+      "y": 3520,
+      "width": 340,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "fc30c4ab78b13d94",
+      "type": "text",
+      "text": "**_front-html___**\nPages · Deployer\n🌐 public · Gh · html\n[GitHub](https://github.com/diegonmarcos/_front-html___)",
+      "x": 700,
+      "y": 3560,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "4788bf4b9d2cbd74",
+      "type": "group",
+      "label": "diegonmarcos",
+      "x": 680,
+      "y": 3720,
+      "width": 340,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "2a655d68e7c73111",
+      "type": "text",
+      "text": "**diegonmarcos**\nProfile · README\n🌐 public · Gh · html\n[GitHub](https://github.com/diegonmarcos/diegonmarcos)",
+      "x": 700,
+      "y": 3760,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    },
+    {
+      "id": "1d2b092b71b180b5",
+      "type": "group",
+      "label": "diegonmarcos.github.io",
+      "x": 680,
+      "y": 3920,
+      "width": 340,
+      "height": 180,
+      "color": "5"
+    },
+    {
+      "id": "f64ab6209f919f6a",
+      "type": "text",
+      "text": "**diegonmarcos.github.io**\nPages · Deployer\n🌐 public · Gh · html\n[GitHub](https://github.com/diegonmarcos/diegonmarcos.github.io)",
+      "x": 700,
+      "y": 3960,
+      "width": 300,
+      "height": 120,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "6a2873cb04630792",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "ae41605aad5649d4",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "45d64dd85c14862e",
+      "fromNode": "ae41605aad5649d4",
+      "fromSide": "right",
+      "toNode": "4d9d07e4c02e48fa",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "6a1f538615d9df47",
+      "fromNode": "ae41605aad5649d4",
+      "fromSide": "right",
+      "toNode": "3c33994495f9ba6a",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "4344d28da0999ce0",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "5ed9c5e27a549178",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "6f0802500272703a",
+      "fromNode": "5ed9c5e27a549178",
+      "fromSide": "right",
+      "toNode": "9d2293fb95755992",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "a9b1b14fef585a4c",
+      "fromNode": "9d2293fb95755992",
+      "fromSide": "right",
+      "toNode": "c952f08b0288b53b",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "894601daa10ac553",
+      "fromNode": "c952f08b0288b53b",
+      "fromSide": "right",
+      "toNode": "295a4c825dc0b5e7",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "7cad5aee8ea922f1",
+      "fromNode": "c952f08b0288b53b",
+      "fromSide": "right",
+      "toNode": "663b3d5d2684d9fa",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "96e037b20dff413a",
+      "fromNode": "c952f08b0288b53b",
+      "fromSide": "right",
+      "toNode": "03c30e10463487c1",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "5c3be3279b20bbf4",
+      "fromNode": "c952f08b0288b53b",
+      "fromSide": "right",
+      "toNode": "d00ea3fed3e0b97e",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "6d57fe686050d3e4",
+      "fromNode": "c952f08b0288b53b",
+      "fromSide": "right",
+      "toNode": "bd0a6aba995e6fb2",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "5dcdbf5a31d162b7",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "1995239d98b99b14",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "691aad24c90338ac",
+      "fromNode": "1995239d98b99b14",
+      "fromSide": "right",
+      "toNode": "a15f44f67ca86eb9",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "4d3e45b50f551ad2",
+      "fromNode": "1995239d98b99b14",
+      "fromSide": "right",
+      "toNode": "77e7f50adc3b44a6",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "7cb0c8b68b5a50cb",
+      "fromNode": "1995239d98b99b14",
+      "fromSide": "right",
+      "toNode": "d8b88f1892f4e226",
+      "toSide": "left",
+      "color": "1"
+    },
+    {
+      "id": "055bb881947f397a",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "c58fc671fb7c8773",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "f13971f05e7f8bec",
+      "fromNode": "c58fc671fb7c8773",
+      "fromSide": "right",
+      "toNode": "a8fd9977049c760b",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "d1afe3329fcbb7ec",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "99e82aea5183040e",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "0b2136cf9d47eca1",
+      "fromNode": "99e82aea5183040e",
+      "fromSide": "right",
+      "toNode": "903972ebdeb612ba",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "c88f51ff32444efe",
+      "fromNode": "99e82aea5183040e",
+      "fromSide": "right",
+      "toNode": "8c0613a8b5f718ae",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "d6606a5eb02d2fa3",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "fc30c4ab78b13d94",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "8577fac940878b9c",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "2a655d68e7c73111",
+      "toSide": "left",
+      "color": "4"
+    },
+    {
+      "id": "f040fd3766f97f5d",
+      "fromNode": "61b37abb2d70ec68",
+      "fromSide": "right",
+      "toNode": "f64ab6209f919f6a",
+      "toSide": "left",
+      "color": "4"
+    }
+  ]
+}
