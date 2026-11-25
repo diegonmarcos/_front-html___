@@ -1,5 +1,5 @@
 {
-  "_doc": "SoT of the html site repos this hub mounts as submodules (owner-declared). .gitmodules and the gitlinks are derived from it: node scripts/gen-gitmodules.mjs [--check]. Each repo is mounted at a root folder of the same name; the two base entries keep their historical folders. All Projects-* html repos are listed (Projects-___ is the Projects hub, mounted per repo under 0_hub, so it is not repeated here).",
+  "_doc": "`renamed_on_github`: declared name -> current GitHub repo name (the SoT registry renamed it, the hub pin and folder follow later); generators use the GitHub name for API reads and URLs. SoT of the html site repos this hub mounts as submodules (owner-declared). .gitmodules and the gitlinks are derived from it: node scripts/gen-gitmodules.mjs [--check]. Each repo is mounted at a root folder of the same name; the two base entries keep their historical folders. All Projects-* html repos are listed (Projects-___ is the Projects hub, mounted per repo under 0_hub, so it is not repeated here).",
   "owner": "diegonmarcos",
   "branch": "main",
   "base": [
@@ -32,6 +32,9 @@
     "projects-pub-all",
     "project-pvt-all"
   ],
+  "renamed_on_github": {
+    "Projects-Library-KG": "lib-chronos"
+  },
   "no_deploy": {
     "project-pvt-all": "PRIVATE: aggregated as a submodule only, never in any public deploy/Pages list"
   },

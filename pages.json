@@ -13,8 +13,8 @@
       "public": true
     },
     {
-      "repo": "Projects-Library-KG",
-      "url": "https://diegonmarcos.github.io/Projects-Library-KG/",
+      "repo": "lib-chronos",
+      "url": "https://diegonmarcos.github.io/lib-chronos/",
       "source": {
         "branch": "main",
         "path": "/",

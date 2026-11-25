@@ -50,6 +50,7 @@ export function parseRoutes(caddyfile) { // host -> published folder of the Page
 
 // ---- inputs ----
 const decl = rd('html-repos.json');
+export const ghName = (n) => (decl.renamed_on_github || {})[n] || n;
 export const folders = () => [...decl.base.map((b) => [b.repo, b.path]), ...decl.repos.map((r) => [r, r])];
 const kinds = () => rd('git-repos-master/A0_repos-tree/src/kinds.json').repos;
 export const sotHtml = () => Object.entries(kinds()).filter(([, v]) => v.html).map(([n]) => n).sort(cmp);
@@ -61,10 +62,11 @@ function scan() {
   for (const [name] of folders()) {
     if (name in (decl.no_deploy || {})) continue;
     try {
-      const tree = JSON.parse(gh([`repos/${OWNER}/${name}/git/trees/HEAD?recursive=1`])).tree;
+      const g = ghName(name);
+      const tree = JSON.parse(gh([`repos/${OWNER}/${g}/git/trees/HEAD?recursive=1`])).tree;
       const dirs = tree.filter((t) => t.type === 'tree' && !/node_modules|(^|\/)\./.test(t.path) && t.path.split('/').length <= 2).map((t) => t.path).sort(cmp);
       const cnames = {};
-      for (const t of tree) if (t.type === 'blob' && /(^|\/)CNAME$/.test(t.path) && !/node_modules/.test(t.path)) cnames[t.path] = raw(name, t.path).trim();
+      for (const t of tree) if (t.type === 'blob' && /(^|\/)CNAME$/.test(t.path) && !/node_modules/.test(t.path)) cnames[t.path] = raw(g, t.path).trim();
       repos[name] = { dirs, cnames };
     } catch (e) { repos[name] = { error: 'unreadable (renamed or private)' }; }
   }
@@ -78,7 +80,7 @@ export function build() {
   const sot = new Set(sotHtml()), links = gitlinks(), noDeploy = decl.no_deploy || {};
   const sha = (p) => links[p];
   const entries = folders().map(([name, folder]) => {
-    const s = sc.repos[name] || {}, priv = name in noDeploy;
+    const g = ghName(name), s = sc.repos[name] || {}, priv = name in noDeploy;
     const own = (s.dirs || []);
     const deploys = priv ? [] : sc.projects.filter((p) => p.name !== '.' && p.src.split('/').length === 2 && own.includes(p.src)).map((p) => ({ source: p.src, folder: p.name, url: `https://${SITE}/${p.name}/` }));
     const hosts = new Set();
@@ -88,8 +90,9 @@ export function build() {
     const alias = Object.keys(links).find((p) => p !== folder && sha(p) === sha(folder) && !folders().some(([, f]) => f === p && f === name));
     return {
       name, folder, sot_html: sot.has(name), private: priv,
-      github: `https://github.com/${OWNER}/${name}`,
-      pages_url: pages[name] ?? null,
+      github: `https://github.com/${OWNER}/${g}`,
+      ...(g !== name ? { github_name: g } : {}),
+      pages_url: pages[g] ?? null,
       custom_domain: cn.length ? cn[0].domain : null,
       cnames: cn,
       overlay_pages: deploys,

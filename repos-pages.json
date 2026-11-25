@@ -482,13 +482,13 @@
       "folder": "Projects-Library-KG",
       "sot_html": true,
       "private": false,
-      "github": "https://github.com/diegonmarcos/Projects-Library-KG",
-      "pages_url": "https://diegonmarcos.github.io/Projects-Library-KG/",
+      "github": "https://github.com/diegonmarcos/lib-chronos",
+      "github_name": "lib-chronos",
+      "pages_url": "https://diegonmarcos.github.io/lib-chronos/",
       "custom_domain": null,
       "cnames": [],
       "overlay_pages": [],
-      "domain_pages": [],
-      "scan_error": "unreadable (renamed or private)"
+      "domain_pages": []
     },
     {
       "name": "projects-pub-all",

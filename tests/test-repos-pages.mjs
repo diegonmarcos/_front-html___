@@ -41,7 +41,7 @@ export function missing(d, sot) {
     if (!d.treeDist.includes(n)) miss('00_repos-tree/dist');
   }
   // pages.json lists only repos that publish GitHub Pages: each must carry its URL in repos-pages.json
-  for (const n of d.pages) { const r = d.repoPages.find((x) => x.name === n); if (!r || !r.pages_url) out.push(`${n} x repos-pages.json pages_url`); }
+  for (const n of d.pages) { const r = d.repoPages.find((x) => (x.github_name || x.name) === n); if (!r || !r.pages_url) out.push(`${n} x repos-pages.json pages_url`); }
   return out;
 }
 
@@ -53,7 +53,7 @@ ok('repos-pages.json equals a fresh render (no drift)', () => assert.deepEqual(J
 ok('every declared repo has a repos-pages.json entry with name, folder, github, pages_url, domain_pages', () => {
   for (const [name, folder] of folders()) {
     const r = d.repoPages.find((x) => x.name === name); assert.ok(r, name); assert.equal(r.folder, folder);
-    assert.equal(r.github, `https://github.com/diegonmarcos/${name}`); assert.ok('pages_url' in r && Array.isArray(r.domain_pages) && 'custom_domain' in r);
+    assert.equal(r.github, `https://github.com/diegonmarcos/${r.github_name || name}`); assert.ok('pages_url' in r && Array.isArray(r.domain_pages) && 'custom_domain' in r);
   }
 });
 ok('prf-prs is served: overlay pages and a domain page', () => {
