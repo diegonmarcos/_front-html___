@@ -33,3 +33,18 @@ jobs:
           submodules: false
       - name: Submodule set equals the declared html-repo list
         run: node scripts/gen-gitmodules.mjs --check
+  repos-pages:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Fetch the git-repos-master submodule (SoT kinds.json)
+        run: git submodule update --init --depth 1 git-repos-master
+      - name: repos-pages.json equals a fresh render (drift guard)
+        run: node scripts/gen-repos-pages.mjs --check
+      - name: Every SoT html repo is on every surface (with mutations)
+        run: node tests/test-repos-pages.mjs

@@ -20,6 +20,22 @@ Public hub of the owner's HTML front ends.
 Cloud Browser (Favourites > GH Pages) reads
 `https://raw.githubusercontent.com/diegonmarcos/_front-html___/main/pages.json` at runtime and keeps the last good copy as a cache.
 
+## Consolidated repo pages (repos-pages.json)
+
+One generated entry per html repo: `name`, `folder` (submodule path), `github`, `pages_url` (own GitHub Pages, from `pages.json`),
+`custom_domain` + `cnames` (CNAME files), `overlay_pages` (folders of `diegonmarcos.github.io` built from the repo, per the site's
+`ship.yml` PROJECTS) and `domain_pages` (every `*.diegonmarcos.com` host the fleet Caddyfile routes to those folders; the Pages site
+lists all). Most html repos publish no Pages of their own (so they are absent from `pages.json`, e.g.
+`cloud-me-pub-profiles-prf-prs`): they are served through `diegonmarcos.github.io/<folder>/` and the domain pages. `sot_html` marks the
+SoT kind html (git-repos-master `kinds.json`); other entries are declared in `html-repos.json` only (renamed or private).
+
+    node scripts/gen-repos-pages.mjs --scan    # refresh repos-pages.scan.json from GitHub (gh), then write
+    node scripts/gen-repos-pages.mjs           # offline: cache + SoTs -> repos-pages.json
+    node scripts/gen-repos-pages.mjs --check   # drift guard (CI: pages-drift.yml, job repos-pages)
+    node tests/test-repos-pages.mjs            # every SoT html repo on every surface, mutation-proven
+
+Surfaces checked: `.gitmodules`, `html-repos.json`, gitlink, `index.json`, `index.html`, `repos-tree.json`, `00_repos-tree/dist`, `repos-pages.json`.
+
 ## Repos tree (00_repos-tree/)
 
 The hub's own tree of html repos. Same layout as `_git-repos-master/A0_repos-tree`: `00_repos-tree/src/` (input: `filter.json`; the
